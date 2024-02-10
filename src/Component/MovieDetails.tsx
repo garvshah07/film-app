@@ -1,4 +1,12 @@
-const MovieDetails = ({ film }) => {
+interface Movie {
+  title: string;
+  director: string;
+  producers: string[];
+  releaseDate: string;
+  // Add other properties as needed
+}
+
+const MovieDetails: React.FC<{ film: Movie }> = ({ film }) => {
   return (
     <div className="max-w-md mx-auto mt-8 bg-white p-6 rounded-md shadow-md">
       <h2 className="text-xl font-bold mb-4">{film?.title}</h2>
